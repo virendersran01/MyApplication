@@ -37,8 +37,8 @@ public class PhotoSpiral extends ViewGroup {
                      y = 0;
                      break;
                  case 2:
-                     x = childHeight;
-                     y = childWidth;
+                     x = child.getMeasuredHeight();
+                     y = child.getMeasuredWidth();
                      break;
                  case 3:
                      x = 0;
