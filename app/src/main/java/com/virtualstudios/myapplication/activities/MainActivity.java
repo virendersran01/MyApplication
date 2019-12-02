@@ -2,6 +2,7 @@ package com.virtualstudios.myapplication.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -30,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
             public void onChangeValue(int value) {
                 int result = valuePicker1.getValue() * valuePicker2.getValue();
                 textView.setText(String.valueOf(result));
+                if (result == 5){
+                    startActivity(new Intent(MainActivity.this, PhotoSpiralActivity.class));
+                }
             }
         };
 
