@@ -26,14 +26,14 @@ public class Pizza extends View {
 
     public Pizza(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-        init();
         obtainAttributes(context, attrs);
+        init();
     }
 
     public Pizza(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        init();
         obtainAttributes(context, attrs);
+        init();
     }
 
     private void obtainAttributes(Context context, @Nullable AttributeSet attrs){
@@ -66,9 +66,9 @@ public class Pizza extends View {
     }
 
     private void drawPizzaCuts(Canvas canvas, float cx, float cy, float radius){
-        final float degree = 360f / mNumWedges;
+        final float degree = 360f / 4;
         canvas.save();
-        for (int i=0;i<mNumWedges;i++) {
+        for (int i=0;i<4;i++) {
             canvas.rotate(degree, cx, cy);
             canvas.drawLine(cx, cy, cx, cy - radius, paint);
         }
